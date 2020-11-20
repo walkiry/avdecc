@@ -55,6 +55,14 @@ option(ALLOW_SEND_BIG_AECP_PAYLOADS "Allow sending AECP payloads bigger than the
 
 ############ CMake configuration
 
+include_directories( ${CMAKE_PREFIX_PATH}/include/,
+		     ${CMAKE_PREFIX_PATH}/usr/local/include/,
+		     ${CMAKE_PREFIX_PATH}/usr/include/)
+
+link_directories(${CMAKE_PREFIX_PATH}/lib/,
+		     ${CMAKE_PREFIX_PATH}/usr/local/lib/,
+		     ${CMAKE_PREFIX_PATH}/usr/lib/)
+
 project(LA_avdecc)
 
 # Using c++17 standard for all targets
