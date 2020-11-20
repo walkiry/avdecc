@@ -61,12 +61,12 @@ project(LA_avdecc)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
-include_directories( ${CMAKE_PREFIX_PATH}/include/,
-		     ${CMAKE_PREFIX_PATH}/usr/local/include/,
+include_directories( ${CMAKE_PREFIX_PATH}/include/
+		     ${CMAKE_PREFIX_PATH}/usr/local/include/
 		     ${CMAKE_PREFIX_PATH}/usr/include/)
 
-link_directories(${CMAKE_PREFIX_PATH}/lib/,
-		     ${CMAKE_PREFIX_PATH}/usr/local/lib/,
+link_directories(${CMAKE_PREFIX_PATH}/lib/
+		     ${CMAKE_PREFIX_PATH}/usr/local/lib/
 		     ${CMAKE_PREFIX_PATH}/usr/lib/)
 
 # Set minimum OSX version
