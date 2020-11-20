@@ -55,6 +55,12 @@ option(ALLOW_SEND_BIG_AECP_PAYLOADS "Allow sending AECP payloads bigger than the
 
 ############ CMake configuration
 
+project(LA_avdecc)
+
+# Using c++17 standard for all targets
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
+
 include_directories( ${CMAKE_PREFIX_PATH}/include/,
 		     ${CMAKE_PREFIX_PATH}/usr/local/include/,
 		     ${CMAKE_PREFIX_PATH}/usr/include/)
@@ -62,12 +68,6 @@ include_directories( ${CMAKE_PREFIX_PATH}/include/,
 link_directories(${CMAKE_PREFIX_PATH}/lib/,
 		     ${CMAKE_PREFIX_PATH}/usr/local/lib/,
 		     ${CMAKE_PREFIX_PATH}/usr/lib/)
-
-project(LA_avdecc)
-
-# Using c++17 standard for all targets
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
 # Set minimum OSX version
 set(CMAKE_OSX_DEPLOYMENT_TARGET 10.9 CACHE INTERNAL "Force the target to be at least a Mac OS X 10.9" FORCE)
